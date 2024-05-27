@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to right, #ee9ca7, #ffdde1);
+  color: #333;
+}
+
+header {
+  font-size: 3.5rem;
+  text-align: center;
+  margin: 2rem 0 0;
+  font-weight: 600;
+  color: rgb(239, 73, 106);
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 7rem 7rem 7rem;
+  column-gap: 0.5rem;
+  row-gap: 0.5rem;
+  justify-content: center;
+  margin: 4rem;
+  align-items: center;
+}
+
+.btn {
+  height: 7rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 3rem;
+  color: #fff;
+}
+
+.btn:hover {
+  transform: scale(0.9);
+  transition: all 1s ease;
+}
+
+.reset {
+  background-color: #255006;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 1rem;
+  width: 8rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.reset:hover {
+  background-color: #408512;
+  transition: all 0.5s ease;
+}
+
+.winner {
+  height: 70vmin;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem;
+  color: #333;
+}
+
+.play-again {
+  background-color: #255006;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 1rem;
+  width: 8rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.play-again:hover {
+  background-color: #408512;
+  transition: all 0.5s ease;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+footer {
+  background-color: aliceblue;
+  width: 10rem;
+  border-radius: 5px;
+  padding: 0.1rem;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  text-align: center;
+}
