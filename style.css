@@ -45,6 +45,7 @@ header {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   font-size: 3rem;
   color: #fff;
+  background-color: #fff;
 }
 
 .btn:hover {
@@ -70,12 +71,12 @@ header {
 }
 
 .winner {
-  height: 70vmin;
+  height: 1vh;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
   font-size: 2rem;
   text-align: center;
   margin: 2rem;
@@ -101,10 +102,6 @@ header {
 
 .hide {
   display: none;
-}
-
-.show {
-  display: block;
 }
 
 footer {

@@ -1,6 +1,7 @@
 let boxes = document.querySelectorAll(".btn");
 let resetbtn = document.querySelector(".reset");
 let winnerblock = document.querySelector(".winner");
+let winText = document.querySelector(".winner-text");
 let replay = document.querySelector(".play-again");
 
 let turns0 = 0;
@@ -22,7 +23,7 @@ const newGame = () => {
     box.disabled = false;
     box.style.backgroundColor = "white";
   });
-  winnerblock.classList.remove("show");
+  winnerblock.classList.add("hide");
 };
 
 const checkWinner = () => {
@@ -33,8 +34,24 @@ const checkWinner = () => {
 
     if (pos1val != "" && pos2val != "" && pos3val != "") {
       if (pos1val == pos2val && pos2val == pos3val) {
-        winnerblock.classList.add("show");
+        boxes.forEach((box) => {
+          box.disabled = true;
+        });
+        winText.innerText = `Congratulations, ${pos1val} wins!`;
+        winnerblock.classList.remove("hide");
         break;
+      } else {
+        let draw = 1;
+        for (let i = 0; i < boxes.length; i++) {
+          if (boxes[i].innerText == "") {
+            draw = 0;
+            break;
+          }
+        }
+        if (draw == 1) {
+          winText.innerText = `It's a draw!`;
+          winnerblock.classList.remove("hide");
+        }
       }
     }
   }
