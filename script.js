@@ -39,6 +39,11 @@ const checkWinner = () => {
         });
         winText.innerText = `Congratulations, ${pos1val} wins!`;
         winnerblock.classList.remove("hide");
+        confetti({
+          particleCount: 200,
+          spread: 150,
+          origin: { y: 0.6 },
+        });
         break;
       } else {
         let draw = 1;
